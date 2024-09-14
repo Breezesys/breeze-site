@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purchase Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="purchase-container">
+        <h2>Confirm Your Purchase</h2>
+        <div class="card-details">
+            <h3 id="selected-plan"></h3>
+            <ul>
+                <li><img src="11488441.png" alt="Checkmark"> Legit Aimbot</li>
+                <li><img src="11488441.png" alt="Checkmark"> Customizable Visuals</li>
+                <li><img src="11488441.png" alt="Checkmark"> Secure Bypass</li>
+                <li><img src="11488441.png" alt="Checkmark"> Windows 10/11 Support</li>
+            </ul>
+            <button id="confirm-btn">Proceed to Payment</button>
+        </div>
+    </div>
+
+    <script>
+        // This script will dynamically show the selected plan
+        const urlParams = new URLSearchParams(window.location.search);
+        const plan = urlParams.get('plan');
+        const selectedPlanElement = document.getElementById('selected-plan');
+        const confirmBtn = document.getElementById('confirm-btn');
+
+        if (plan === '1day') {
+            selectedPlanElement.textContent = '1 Day Plan - $6.99';
+        } else if (plan === '7days') {
+            selectedPlanElement.textContent = '7 Day Plan - $14.99';
+        } else if (plan === '30days') {
+            selectedPlanElement.textContent = '30 Day Plan - $59.99';
+        } else if (plan === 'lifetime') {
+            selectedPlanElement.textContent = 'Lifetime License - $199.99';
+        }
+
+        confirmBtn.addEventListener('click', () => {
+            alert(`You selected the ${selectedPlanElement.textContent}. Redirecting to payment...`);
+        });
+    </script>
+</body>
+</html>

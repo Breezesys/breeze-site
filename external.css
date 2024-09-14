@@ -1,0 +1,52 @@
+body {
+    background-color: #0a0b1a;
+    color: white;
+    font-family: 'Arial', sans-serif;
+}
+
+#fortnite {
+    text-align: center;
+    padding: 20px;
+}
+
+button {
+    background-color: #6f00ff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4e00d1;
+}
+
+/* Hidden by default with fade-in effect */
+.features {
+    display: none;  /* Hidden initially */
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+/* For fade-in animation */
+.show {
+    opacity: 1;  /* Fully visible */
+    transition: opacity 1s ease-in-out;  /* Smooth fade-in */
+}
+
+.feature-column {
+    display: inline-block;
+    width: 25%;
+    vertical-align: top;
+    text-align: left;
+}
+
+.feature-column ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.feature-column li {
+    margin: 5px 0;
+}
