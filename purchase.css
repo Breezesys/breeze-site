@@ -154,3 +154,92 @@ button:hover {
     margin-right: 8px;  /* Space between image and text */
     vertical-align: middle;  /* Align vertically with text */
 }
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0a0b1a;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+#confirm-purchase {
+    margin-top: 50px;
+}
+
+h2 {
+    font-size: 2em;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.license-options {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.license-option {
+    background-color: #111226;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.license-option h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.license-option p {
+    font-size: 0.9em;
+    margin-bottom: 20px;
+    color: #aaa;
+}
+
+button {
+    background-color: #6f00ff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4e00d1;
+}
+
+/* Resize and style checkmark icon */
+.card ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.card li {
+    margin: 8px 0;
+    display: flex;
+    align-items: center;
+}
+
+.card li img {
+    width: 20px; /* Adjust this value for icon size */
+    height: 20px; /* Adjust as needed */
+    margin-right: 8px;
+    transition: transform 0.3s ease; /* Add hover effect for smooth resize */
+}
+
+.card li img:hover {
+    transform: scale(1.2); /* Slightly enlarge on hover */
+}
+
+.checkmark {
+    margin-right: 10px;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+}

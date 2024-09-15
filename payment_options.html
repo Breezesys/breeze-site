@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Payment Method</title>
+    <link rel="stylesheet" href="payment_options.css"> <!-- Link your CSS file -->
+</head>
+<body>
+    <section id="payment-selection">
+        <h2>Select Your Payment Method</h2>
+        <p>Please choose how you'd like to pay for your product:</p>
+
+        <!-- Payment Options Container -->
+        <div class="payment-options">
+            <!-- CashApp Option -->
+            <div class="payment-option card" data-aos="zoom-in" data-aos-delay="100">
+                <img src="cashapp.png" alt="CashApp Logo" class="cashapp-logo">
+                <h3>CashApp</h3>
+                <a href="cashapp_payment.html"><button class="pay-button">Select CashApp</button></a>
+            </div>
+    </section>
+
+    <!-- AOS animation script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000, // Set the duration for the animations
+            once: true // Only animate on first scroll
+        });
+    </script>
+</body>
+</html>

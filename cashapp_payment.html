@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CashApp Payment</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <section class="payment-section">
+        <h2>CashApp Payment</h2>
+        <p class="instructions">Please scan the QR code or send payment to the cashtag provided below. After completing the payment, enter the transaction ID and your name for verification.</p>
+
+        <!-- CashApp QR Code -->
+        <div class="payment-details">
+            <div class="qr-code">
+                <img src="$hydebtw11.png" alt="CashApp QR Code" />
+            </div>
+            <div class="cashtag">
+                <p>Send payment to: <strong>$hydebtw11</strong></p>
+                <p>Amount: <strong>$8.99</strong></p>
+            </div>
+        </div>
+
+        <!-- Payment Form -->
+        <form action="process_cashapp_payment.php" method="POST" class="payment-form">
+            <div class="form-group">
+                <label for="transaction-id">Enter CashApp Transaction ID:</label>
+                <input type="text" name="transaction-id" id="transaction-id" required>
+            </div>
+            <div class="form-group">
+                <label for="sender-name">Enter Your Name:</label>
+                <input type="text" name="sender-name" id="sender-name" required>
+            </div>
+            <button type="submit" class="submit-btn">Submit Payment</button>
+        </form>
+    </section>
+
+    <!-- Add your footer or other elements here -->
+</body>
+</html>

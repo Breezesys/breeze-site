@@ -2,14 +2,53 @@ body {
     background-color: #0a0b1a;
     color: white;
     font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h2, h3 {
+    color: white;
+    text-align: center;
 }
 
 #fortnite {
+    padding: 40px;
     text-align: center;
-    padding: 20px;
 }
 
-button {
+.license-options {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 30px;
+}
+
+.card {
+    background-color: #111226;
+    border-radius: 10px;
+    padding: 20px;
+    width: 220px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card h3 {
+    font-size: 22px;
+}
+
+.card h2 {
+    font-size: 28px;
+    color: #6f00ff;
+}
+
+.card span {
+    font-size: 16px;
+}
+
+.buy-now {
     background-color: #6f00ff;
     color: white;
     padding: 10px 20px;
@@ -18,35 +57,42 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+.buy-now:hover {
     background-color: #4e00d1;
 }
 
-/* Hidden by default with fade-in effect */
-.features {
-    display: none;  /* Hidden initially */
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-}
-
-/* For fade-in animation */
-.show {
-    opacity: 1;  /* Fully visible */
-    transition: opacity 1s ease-in-out;  /* Smooth fade-in */
-}
-
-.feature-column {
-    display: inline-block;
-    width: 25%;
-    vertical-align: top;
-    text-align: left;
-}
-
-.feature-column ul {
+.card ul {
     list-style-type: none;
     padding: 0;
 }
 
-.feature-column li {
-    margin: 5px 0;
+.card li {
+    margin: 8px 0;
+    display: flex;
+    align-items: center;
+}
+
+.card li img {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+/* Add fade and slide animations */
+[data-aos="fade-up"] {
+    opacity: 0;
+    transform: translateY(50px);
+    transition-property: opacity, transform;
+}
+
+[data-aos="fade-up"].aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.checkmark-img {
+    margin-right: 10px;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
 }

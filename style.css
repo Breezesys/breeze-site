@@ -1,66 +1,130 @@
-/* Basic Styling */
-* {
+/* General Body Styling */
+body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    background-color: #0a0b1a; /* Dark theme background */
-    color: white;
     font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    padding: 20px;
-}
-
-/* Container to center the content */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-/* Headings */
-h1, h2, h3 {
-    text-align: center;
-    color: #ffffff;
-    margin-bottom: 20px;
-}
-
-/* Links and Buttons */
-a, button {
-    text-decoration: none;
+    background-color: #0a0b1a;
     color: white;
-    background-color: #6f00ff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    display: inline-block;
-    transition: background-color 0.3s ease;
+    text-align: center;
 }
 
-a:hover, button:hover {
+.menu {
+    padding: 50px 20px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+p {
+    margin-bottom: 40px;
+    font-size: 18px;
+}
+
+/* Container for Sub-Options */
+.sub-options-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+/* Sub-option box */
+.sub-option {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: left;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s, border 0.3s ease;
+}
+
+/* Text and Price */
+.sub-option h3 {
+    position: absolute;
+    bottom: 130px; /* Adjusted this to move it above the price */
+    left: 20px;
+    font-size: 22px;
+    font-family: 'Luckiest Guy', sans-serif;
+    color: #fff; /* Ensure full opacity */
+}
+
+.price {
+    position: absolute;
+    bottom: 70px; /* This remains the same */
+    left: 20px;
+    font-size: 18px;
+    background-color: blue;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.price span {
+    color: white; /* White text with filled blue background */
+}   
+
+/* Hover effect */
+.sub-option:hover {
+    filter: brightness(70%);
+    border: 2px solid #4e00d1;
+    transition: filter 0.3s ease, border 0.3s ease;
+}
+
+.buy-now {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4e00d1;
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    opacity: 0;
+    width: 90%;
+    max-width: 260px;
+    transition: opacity 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Add a transition to smooth the flipping, scrolling, and glowing */
+.buy-now:hover {
+    background-color: #4e00d1;
+    transform: translateX(-50%) translateY(-10px) rotateX(360deg);
+    box-shadow: 0 0 20px 5px #4cc9ff; /* Enhance the glow effect */
+    transition: transform 0.5s ease, background-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+.sub-option:hover .buy-now {
+    opacity: 1;
+    box-shadow: 0 0 15px 5px #4cc9ff; /* Glow effect */
+    transform: translateX(-50%) translateY(-10px) rotateX(360deg); /* Flip and scroll up */
     background-color: #4e00d1;
 }
 
-/* For sections like Fortnite or Spoofer */
-section {
-    background-color: #1c1f33;
-    padding: 50px;
-    border-radius: 10px;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
-    margin-bottom: 20px;
-    text-align: center;
+.sub-option:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+    border: 2px solid #4cc9ff;
+    transition: box-shadow 0.4s ease, border 0.4s ease, transform 0.4s ease;
 }
 
-/* List for Features */
-ul.features {
-    list-style: none;
-    margin: 20px 0;
-    padding: 0;
+/* Fortnite External */
+.fortnite {
+    background-image: url('Fortnite_blog_season-x-blog_10BR_Announce_KeyArt_BlogThumbnail-(1)-576x576-244d3eee119f0e50a5c429ba624465961ca84883.jpg');
+    filter: brightness(70%);
 }
 
-ul.features li {
-    display: flex;
-    align-items: center;
-   
+/* Temporary Spoofer */
+.spoofer {
+    background-image: url('temp_nigga.png');
+    filter: brightness(70%);
 }

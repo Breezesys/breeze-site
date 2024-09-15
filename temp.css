@@ -1,66 +1,161 @@
-/* Basic Styling */
-* {
+/* General Body Styling */
+body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    background-color: #0a0b1a; /* Dark theme background */
-    color: white;
     font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    padding: 20px;
-}
-
-/* Container to center the content */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-/* Headings */
-h1, h2, h3 {
-    text-align: center;
-    color: #ffffff;
-    margin-bottom: 20px;
-}
-
-/* Links and Buttons */
-a, button {
-    text-decoration: none;
+    background-color: #0a0b1a;
     color: white;
+    text-align: center;
+}
+
+.pricing-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.pricing-box {
+    background-color: #111226;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 250px;
+}
+
+.price {
+    color: #4cc9ff;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.buy-now {
     background-color: #6f00ff;
+    color: white;
     padding: 10px 20px;
+    border: none;
     border-radius: 5px;
-    display: inline-block;
+    cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-a:hover, button:hover {
+.buy-now:hover {
     background-color: #4e00d1;
 }
 
-/* For sections like Fortnite or Spoofer */
-section {
-    background-color: #1c1f33;
-    padding: 50px;
+/* Dropdown Menu Styling */
+.dropdown-section {
+    margin-top: 20px;
+}
+
+.dropdown-btn {
+    background-color: #4cc9ff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 0 10px;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-btn:hover {
+    background-color: #3797dd;
+}
+
+.dropdown-content {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #111226;
+    color: white;
     border-radius: 10px;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
-    margin-bottom: 20px;
-    text-align: center;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: max-height 0.6s ease, opacity 0.6s ease, transform 0.6s ease;
+    overflow: hidden;
 }
 
-/* List for Features */
-ul.features {
+.dropdown-content.show {
+    max-height: 500px; /* Adjust based on your content */
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.requirements-list, .features-list {
+    display: flex;
+    justify-content: space-between;
+    line-height: 2
+}
+
+.requirements-list div, .features-list div {
+    width: 30%;
+}
+
+ul {
     list-style: none;
-    margin: 20px 0;
     padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the entire list */
+    justify-content: center; /* Ensure vertical alignment */
 }
 
-ul.features li {
+ul li {
+    display: inline-block;
+    text-align: left;
+    padding-left: 20px; /* Adjust the padding to space items */
+    position: relative;
+    width: 100%; /* Ensure it spans the full width of the container */
+}
+
+/* Top Features Checkmark Styling */
+.top-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.top-features li {
     display: flex;
     align-items: center;
-   
+    margin: 8px 0;
+    font-size: 16px;
+}
+
+.checkmark {
+    margin-right: 10px;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+}
+
+/* CSS for centering the features list */
+#features ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* This will center the list items horizontally */
+}
+
+#features ul li {
+    margin: 10px 0; /* This will add some vertical space between each list item */
+    text-align: center; 
+}
+
+
+.show {
+    opacity: 1;
+    transform: translateY(0); /* Reset transform to 0 for sliding in */
+}
+
+.hide {
+    opacity: 0;
+    transform: translateY(20px); /* Slide out downwards */
 }
